@@ -1,0 +1,11 @@
+﻿age group,Heart Disease Status,Count of Heart Disease Status
+16-20,Yes,91
+20-30,Yes,296
+30-40,Yes,357
+40-60,Yes,610
+>60,Yes,646
+16-20,No,367
+20-30,No,1231
+30-40,No,1271
+40-60,No,2493
+>60,No,2638

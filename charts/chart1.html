@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chart 1 - Nhóm 12</title>
+  <link rel="stylesheet" href="chart1Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌱 Nhóm <span class="highlight">12</span></div>
+    <nav class="nav-links">
+      <a href="../index.html">Trang chủ</a>
+      <a href="../dataset.html">Dataset</a>
+      <a href="../members.html">Thành viên</a>
+      <a href="../charts.html" class="active">Biểu đồ</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- ✅ Phần cần chụp ảnh -->
+    <div id="chart1-capture">
+      <h1 class="chart-title">Task 1: Phân bố bệnh tim theo nhóm tuổi</h1>
+      <svg width="960" height="600"></svg>
+      <div id="legend-container"></div>
+    </div>
+
+    <!-- ❌ Không chụp phần điều khiển -->
+    <div id="controls">
+      <div class="row-control">
+        <label for="sort">Sắp xếp theo tổng số ca bệnh tim từng nhóm tuổi:</label>
+        <select id="sort">
+          <option value="default">Mặc định</option>
+          <option value="asc">Tăng dần</option>
+          <option value="desc">Giảm dần</option>
+        </select>
+        <button class="download-button">📸 Tải ảnh</button>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <span style="font-weight: 600;">Lọc theo tình trạng bệnh tim:</span>
+        <label><input type="checkbox" class="status" value="Yes" checked> Có bệnh tim</label>
+        <label><input type="checkbox" class="status" value="No" checked> Không có bệnh tim</label>
+      </div>
+    </div>
+
+    <div id="tooltip"></div>
+
+        <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="chart7.html" class="nav-btn left-btn">← Biểu đồ trước</a>
+      <a href="chart2.html" class="nav-btn right-btn">Biểu đồ tiếp →</a>
+    </div>
+
+  </main>
+
+  <script src="chart1Script.js"></script>
+</body>
+</html>

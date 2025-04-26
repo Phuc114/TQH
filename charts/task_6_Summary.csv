@@ -1,0 +1,9 @@
+﻿Heart Disease Status,BMI Bin,Count of project_heart_disease (1).csv
+Yes,>=30,957
+Yes,25-29.9,470
+Yes,18.5-24.9,524
+Yes,<18.5,49
+No,>=30,3644
+No,25-29.9,1872
+No,18.5-24.9,2301
+No,<18.5,183

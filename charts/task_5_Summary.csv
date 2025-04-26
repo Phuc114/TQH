@@ -1,0 +1,9 @@
+﻿Heart Disease Status,Cholesterol Bin,Count of project_heart_disease (1).csv
+Yes,≥280,271
+No,≥280,1184
+Yes,240-279,555
+No,240-279,2098
+Yes,200-239,526
+No,200-239,2081
+Yes,150-199,648
+No,150-199,2637

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chart 3 - Nhóm 12</title>
+  <link rel="stylesheet" href="chart3Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌱 Nhóm <span class="highlight">12</span></div>
+    <nav class="nav-links">
+      <a href="../index.html">Trang chủ</a>
+      <a href="../dataset.html">Dataset</a>
+      <a href="../members.html">Thành viên</a>
+      <a href="../charts.html" class="active">Biểu đồ</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div id="chart3-download-area">
+      <h1 class="chart-title">Task 3: Mối liên hệ giữa hút thuốc và bệnh tim</h1>
+      <svg width="960" height="500"></svg>
+      <div class="legend-container">
+        <strong>Tình trạng bệnh tim:</strong>
+        <span class="legend-box" style="background: orange"></span> Không có bệnh tim
+        <span class="legend-box" style="background: #1f77b4"></span> Có bệnh tim
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <p class="filter-description"><strong>Lọc theo tình trạng bệnh tim:</strong></p>
+      <div class="filter-options">
+        <label><input type="checkbox" class="filter-status" value="Yes" checked> Có bệnh tim</label>
+        <label><input type="checkbox" class="filter-status" value="No" checked> Không có bệnh tim</label>
+      </div>
+    </div>
+
+    <div class="control-bar">
+      <div class="toggle-container">
+        <span>Hiển thị:</span>
+        <label class="switch">
+          <input type="checkbox" id="toggleDisplay" />
+          <span class="slider"></span>
+        </label>
+        <span id="toggleLabel">số</span>
+      </div>
+      <div class="right-actions">
+        <button class="download-button">📸 Tải ảnh</button>
+      </div>
+    </div>
+
+        <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="chart2.html" class="nav-btn left-btn">← Biểu đồ trước</a>
+      <a href="chart4.html" class="nav-btn right-btn">Biểu đồ tiếp →</a>
+    </div>
+
+
+  </main>
+
+  <script src="chart3Script.js"></script>
+</body>
+</html>

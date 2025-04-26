@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 6 - Nhóm 12</title>
+  <link rel="stylesheet" href="chart6Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🌱 Nhóm <span class="highlight">12</span></div>
+    <nav class="nav-links">
+      <a href="../index.html">Trang chủ</a>
+      <a href="../dataset.html">Dataset</a>
+      <a href="../members.html">Thành viên</a>
+      <a href="../charts.html" class="active">Biểu đồ</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1 class="chart-title">Task 6: Có mối tương quan nào giữa chỉ số BMI và tình trạng bệnh tim không?</h1>
+    <div id="chart6-wrapper">
+      <div id="export-area">
+        <div id="chart6-container"></div>
+      </div>
+
+      <div class="control-section">
+        <div class="filter-options">
+          <strong>Lọc theo tình trạng bệnh tim:</strong>
+          <label><input type="radio" name="filter" value="Yes"> Có bệnh tim</label>
+          <label><input type="radio" name="filter" value="No"> Không có bệnh tim</label>
+        </div>
+
+        <div class="sort-controls hidden" id="sort-controls">
+          <button id="sortAsc">⬆️ Sắp xếp tăng dần</button>
+          <button id="sortDesc">⬇️ Sắp xếp giảm dần</button>
+        </div>
+
+        <div class="download-toggle-wrapper">
+          <button id="downloadBtn" class="download-button">📸 Tải ảnh</button>
+          <div class="toggle-display">
+            Hiển thị:
+            <label class="switch">
+              <input type="checkbox" id="toggleDisplay">
+              <span class="slider round"></span>
+            </label>
+            <span id="toggleLabel">số</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="chart6Script.js"></script>
+</body>
+</html>

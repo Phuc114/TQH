@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chart 2 - Nhóm 12</title>
+  <link rel="stylesheet" href="chart2Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌱 Nhóm <span class="highlight">12</span></div>
+    <nav class="nav-links">
+      <a href="../index.html">Trang chủ</a>
+      <a href="../dataset.html">Dataset</a>
+      <a href="../members.html">Thành viên</a>
+      <a href="../charts.html" class="active">Biểu đồ</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- PHẦN NÀY SẼ ĐƯỢC TẢI XUỐNG -->
+    <div id="chart2-download-area">
+      <h1 class="chart-title">Task 2: Tỷ lệ bệnh tim theo giới tính</h1>
+
+      <div class="chart-container" id="chart2-container">
+        <div class="pie-wrapper">
+          <div id="femaleChart" class="pie-chart"></div>
+          <div class="gender-label">Female</div>
+        </div>
+        <div class="pie-wrapper">
+          <div id="maleChart" class="pie-chart"></div>
+          <div class="gender-label">Male</div>
+        </div>
+      </div>
+
+      <div class="legend-container">
+        <strong>Heart Disease Status:</strong>
+        <span class="legend-box" style="background: orange"></span> No
+        <span class="legend-box" style="background: #1f77b4"></span> Yes
+      </div>
+    </div>
+
+    <!-- PHẦN KHÔNG ĐƯỢC TẢI -->
+    <div class="filter-group">
+      <span class="filter-label"><strong>Lọc theo tình trạng bệnh tim:</strong></span>
+      <div id="filter-controls">
+        <label><input type="checkbox" class="filter-status" value="Yes" checked> Có bệnh tim</label>
+        <label><input type="checkbox" class="filter-status" value="No" checked> Không có bệnh tim</label>
+      </div>
+    </div>
+
+    <div class="toggle-container">
+      <span>Hiển thị:</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleDisplay">
+        <span class="slider"></span>
+      </label>
+      <span id="toggleLabel">số</span>
+
+      <button class="download-button">📸 Tải ảnh</button>
+    </div>
+
+        <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="chart1.html" class="nav-btn left-btn">← Biểu đồ trước</a>
+      <a href="chart3.html" class="nav-btn right-btn">Biểu đồ tiếp →</a>
+    </div>
+
+
+  </main>
+
+  <script src="chart2Script.js"></script>
+</body>
+</html>
