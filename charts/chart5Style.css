@@ -18,6 +18,10 @@ body {
   align-items: center;
   background-color: #c6d39b;
   padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -26,14 +30,22 @@ body {
 }
 
 .highlight {
-  color: #5d8147;
+  color: #a9b78c; /* giống task 1 */
 }
 
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
-  color: var(--text);
+  color: #2f2f2f;
   font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #4b6e3c;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 .main {

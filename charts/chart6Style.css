@@ -1,9 +1,5 @@
 :root {
   --beige: #f4f0df;
-  --green-light: #c6d39b;
-  --green-dark: #5d8147;
-  --blue-light: #dceefc;
-  --blue-dark: #08306b;
   --text: #2e2e2e;
 }
 
@@ -14,13 +10,12 @@ body {
   color: var(--text);
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--green-light);
-  padding: 12px 30px;
+  background-color: #c6d39b;
+  padding: 15px 30px;
 }
 
 .logo {
@@ -29,7 +24,7 @@ body {
 }
 
 .highlight {
-  color: var(--green-dark);
+  color: #5d8147;
 }
 
 .nav-links a {
@@ -37,14 +32,39 @@ body {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3b5838;
 }
 
 .nav-links a.active {
-  font-weight: 700;
   text-decoration: underline;
+  font-weight: 600;
 }
 
-/* Main Content */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #5d8147;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
 .main {
   text-align: center;
   padding: 40px 20px;
@@ -53,29 +73,22 @@ body {
 .chart-title {
   font-size: 22px;
   font-weight: 600;
-  color: var(--green-dark);
+  color: #3b5838;
   margin-bottom: 20px;
 }
 
-/* Chart Wrapper */
 #chart6-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 5px; /* Giảm từ 30px xuống 10px */
 }
 
-#export-area {
-  display: flex;
-  justify-content: center;
-}
-
-/* Control Section */
 .control-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .filter-options {
@@ -83,16 +96,15 @@ body {
 }
 
 .sort-controls {
-  display: flex;
-  gap: 10px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .sort-controls button {
+  margin: 0 6px;
+  padding: 6px 14px;
   background-color: #b4c7e7;
   border: none;
   border-radius: 4px;
-  padding: 6px 12px;
   cursor: pointer;
   font-weight: 500;
 }
@@ -101,39 +113,32 @@ body {
   background-color: #a1b3d2;
 }
 
-/* Download + Toggle Section */
 .download-toggle-wrapper {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 10px;
+  gap: 20px;
+  margin-top: 8px;
 }
 
 .download-button {
-  background-color: #c6e2b3;
+  padding: 8px 16px;
+  background-color: #b7d3b2;
+  color: #2f2f2f;
   border: none;
   border-radius: 6px;
-  padding: 8px 16px;
-  font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .download-button:hover {
-  background-color: #add69c;
-}
-
-/* Toggle Display Switch */
-.toggle-display {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
+  background-color: #a4c6a0;
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 45px;
+  width: 48px;
   height: 24px;
 }
 
@@ -145,42 +150,68 @@ body {
 
 .slider {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  cursor: pointer;
   background-color: #ccc;
   border-radius: 24px;
-  cursor: pointer;
-  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
 }
 
 .slider:before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 18px;
   width: 18px;
+  border-radius: 50%;
+  background-color: white;
   left: 3px;
   bottom: 3px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.4s;
+  transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: var(--green-dark);
+  background-color: #4f663f;
 }
 
 input:checked + .slider:before {
-  transform: translateX(21px);
+  transform: translateX(24px);
 }
 
-/* Tooltip */
 .tooltip {
   position: absolute;
-  background-color: white;
+  padding: 8px 12px;
+  background: white;
   border: 1px solid #ccc;
   border-radius: 6px;
-  padding: 8px 10px;
   font-size: 14px;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 80px 0;
+}
+
+.nav-btn {
+  background-color: #d1e7c1;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2e2e2e;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #bad5a9;
 }

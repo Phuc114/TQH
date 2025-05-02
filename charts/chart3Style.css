@@ -41,6 +41,7 @@ body {
   color: var(--text);
   font-weight: 500;
   transition: color 0.2s;
+  font-size: 16px; /* thêm dòng này để khớp với index.html */
 }
 
 .nav-links a:hover,
